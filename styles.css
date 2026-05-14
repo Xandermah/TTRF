@@ -550,6 +550,22 @@ body {
 .fade-up.visible { opacity: 1; transform: translateY(0); }
 .counter { font-family: var(--font-mono); }
 
+/* ========== TEXT ALIGNMENT ========== */
+@media (min-width: 901px) {
+  .hero-desc,
+  .section-subtitle,
+  .case-desc,
+  .ba-col p,
+  .final-block p,
+  .final-quote p,
+  .modal-content p,
+  .comp-card p {
+    text-align: justify;
+    text-align-last: left;
+    hyphens: auto;
+  }
+}
+
 /* ========== RESPONSIVE ========== */
 @media (max-width: 900px) {
   .nav-links {
