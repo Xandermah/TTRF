@@ -801,3 +801,42 @@ body {
     border-color: rgba(96, 165, 250, 0.48);
   }
 }
+/* ========== MOBILE TEXT JUSTIFY FIX ========== */
+@media (max-width: 900px) {
+  html {
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
+
+  .hero-desc,
+  .section-subtitle,
+  .case-desc,
+  .case-card p,
+  .case-body p,
+  .ba-col p,
+  .final-block p,
+  .final-quote p,
+  .modal-content p,
+  .comp-card p,
+  .competence-card p,
+  .timeline p,
+  .tl-desc,
+  .doc-info p {
+    text-align: justify !important;
+    text-align-last: left;
+    text-justify: inter-word;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .hero-title,
+  .section-title,
+  .case-title,
+  .kpi-label,
+  .nav-links a,
+  .doc-info h4 {
+    text-align: inherit;
+  }
+}
