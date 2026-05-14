@@ -840,3 +840,80 @@ body {
     text-align: inherit;
   }
 }
+/* ========== MOBILE JUSTIFY + PROCESS FLOW FIX ========== */
+@media (max-width: 900px) {
+  /* Оставляем выравнивание по ширине, но убираем грубые переносы слов */
+  .hero-desc,
+  .section-subtitle,
+  .case-desc,
+  .case-card p,
+  .ba-col p,
+  .final-block p,
+  .final-quote p,
+  .modal-content p,
+  .comp-card p,
+  .competence-card p,
+  .timeline p,
+  .tl-desc,
+  .doc-info p,
+  .kpi-label {
+    text-align: justify !important;
+    text-align-last: left !important;
+    text-justify: inter-word;
+
+    hyphens: none !important;
+    -webkit-hyphens: none !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+  }
+
+  /* Схему процесса на мобильной версии делаем вертикальной */
+  .process-flow {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+    overflow: visible !important;
+  }
+
+  .process-step {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    box-sizing: border-box;
+    justify-content: center;
+    text-align: center !important;
+    padding: 16px 18px;
+  }
+
+  .process-arrow {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    transform: none !important;
+    margin: -2px 0;
+    line-height: 1;
+    font-size: 0 !important;
+  }
+
+  .process-arrow::before {
+    content: "↓";
+    font-size: 1.35rem !important;
+    color: var(--c-accent);
+  }
+
+  /* В KPI оставляем выравнивание текста по ширине, но число не растягиваем */
+  .kpi-card {
+    text-align: left;
+  }
+
+  .kpi-card .kpi-number {
+    text-align: left;
+  }
+
+  .kpi-card .kpi-label {
+    text-align: justify !important;
+    text-align-last: left !important;
+    line-height: 1.55;
+  }
+}
